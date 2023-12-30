@@ -47,7 +47,7 @@ function DevBio() {
 
 function Skills(props) {
 	return (
-		<div>
+		<div style={{ backgroundColor: props.color }}>
 			{props.name} {props.icon}
 		</div>
 	);
@@ -56,28 +56,47 @@ function Skills(props) {
 function Skillsets() {
 	return (
 		<div className="skills">
-			<div style={{ backgroundColor: "green" }}>
-				<Skills name="JavaScript " icon="💪" />
-			</div>
-			<div style={{ backgroundColor: "purple" }}>
-				<Skills name="HTML + CSS" icon="👌" />
-			</div>
-			<div style={{ backgroundColor: "blue" }}>
-				<Skills name="GitHub" icon="👍" />
-			</div>
-			<div style={{ backgroundColor: "pink" }}>
-				<Skills name="MongoDB" icon="👶" />
-			</div>
-			<div style={{ backgroundColor: "brown" }}>
-				<Skills name="React" icon="👊" />
-			</div>
-			<div style={{ backgroundColor: "yellow" }}>
-				<Skills name="MySQL" icon="👍" />
-			</div>
-			<div style={{ backgroundColor: "aqua" }}>
-				<Skills name="WordPress" icon="🤖" />
-			</div>
-			<Skills name="HTML + CSS" icon="👌" />
+			<Skills name="JavaScript " icon="💪" color="skyblue" />
+			<Skills name="HTML + CSS" icon="👌" color="purple" />
+			<Skills name="GitHub" icon="👍" color="blue" />
+			<Skills name="MongoDB" icon="👶" color="pink" />
+			<Skills name="React" icon="👊" color="orange" />
+			<Skills name="MySQL" icon="👍" color="yellow" />
+			<Skills name="WordPress" icon="🤖" color="aqua" />
+			<Skills name="HTML + CSS" icon="👌" color="violet" />
 		</div>
 	);
 }
+
+// Old way I implemented the color
+
+// function Skillsets() {
+// 	return (
+// 		< className="skills">
+//       <div style={{ backgroundColor: "grey" }}>
+//         <Skills name="HTML + CSS" icon="👌" />
+//       </div>
+// 			<div style={{ backgroundColor: "purple" }}>
+// 				<Skills name="Svelte" icon="👌" />
+// 			</div>
+// 			<div style={{ backgroundColor: "red" }}>
+// 				<Skills name="GitHub" icon="👌" />
+// 			</div>
+// 			<div style={{ backgroundColor: "pink" }}>
+// 				<Skills name="MongoDB" icon="👶" />
+// 			</div>
+// 			<div style={{ backgroundColor: "brown" }}>
+// 				<Skills name="React" icon="👊" />
+// 			</div>
+// 			<div style={{ backgroundColor: "yellow" }}>
+// 				<Skills name="MySQL" icon="👍" />
+// 			</div>
+// 			<div style={{ backgroundColor: "aqua" }}>
+// 				<Skills name="WordPress" icon="🤖" />
+// 			</div>
+// 			<div style={{ backgroundColor: "violet" }}>
+// 				<Skills name="Docker" icon="🤖" />
+// 			</div>
+// 		</div>
+// 	);
+// }
