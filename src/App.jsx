@@ -1,6 +1,8 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import "./index.css";
+// import the JSON Data
+import { skillSetsData } from "./data.js";
 
 export default function App() {
 	return (
@@ -45,10 +47,10 @@ function DevBio() {
 	);
 }
 
-function Skills(props) {
+function Skills({ skillsObj }) {
 	return (
-		<div style={{ backgroundColor: props.color }}>
-			{props.name} {props.icon}
+		<div style={{ backgroundColor: skillsObj.skillsColor }}>
+			{skillsObj.skillName} {skillsObj.emoji}
 		</div>
 	);
 }
@@ -56,14 +58,18 @@ function Skills(props) {
 function Skillsets() {
 	return (
 		<div className="skills">
-			<Skills name="JavaScript " icon="💪" color="skyblue" />
+			{skillSetsData.map((skill) => (
+				<Skills skillsObj={skill} key={skill.skillName} />
+			))}
+			{/* This was the old implementation during version 1 */}
+			{/* <Skills name="JavaScript " icon="💪" color="skyblue" />
 			<Skills name="HTML + CSS" icon="👌" color="purple" />
 			<Skills name="GitHub" icon="👍" color="blue" />
 			<Skills name="MongoDB" icon="👶" color="pink" />
 			<Skills name="React" icon="👊" color="orange" />
 			<Skills name="MySQL" icon="👍" color="yellow" />
 			<Skills name="WordPress" icon="🤖" color="aqua" />
-			<Skills name="HTML + CSS" icon="👌" color="violet" />
+			<Skills name="HTML + CSS" icon="👌" color="violet" /> */}
 		</div>
 	);
 }
