@@ -47,15 +47,17 @@ function DevBio() {
 	);
 }
 
-function Skills({ skillsObj }) {
+function Skill({ skillsObj }) {
 	return (
 		<div style={{ backgroundColor: skillsObj.skillsColor }}>
 			{skillsObj.skillName}
-			{(skillsObj.level == "Beginner" ? (skillsObj.emoji = "👶") : "") ||
-				(skillsObj.level == "Intermediate"
+			{(skillsObj.level === "Beginner" ? (skillsObj.emoji = "👶") : "") ||
+				(skillsObj.level === "Intermediate"
 					? (skillsObj.emoji = "👌")
 					: "") ||
-				(skillsObj.level == "Advanced" ? (skillsObj.emoji = "💪") : "")}
+				(skillsObj.level === "Advanced"
+					? (skillsObj.emoji = "💪")
+					: "")}
 		</div>
 	);
 }
@@ -64,7 +66,7 @@ function Skillsets() {
 	return (
 		<div className="skills">
 			{skillSetsData.map((skill) => (
-				<Skills skillsObj={skill} key={skill.skillName} />
+				<Skill skillsObj={skill} key={skill.skillName} />
 			))}
 			{/* This was the old implementation during version 1 */}
 			{/* <Skills name="JavaScript " icon="💪" color="skyblue" />
