@@ -1,7 +1,7 @@
 export const skillSetsData = [
 	{
 		skillName: "JavaScript",
-		level: "Beginner",
+		level: "Advanced",
 		skillsColor: "Aqua",
 		emoji: "💪",
 	},
@@ -14,7 +14,7 @@ export const skillSetsData = [
 	{
 		skillName: "TypeScript",
 		level: "Beginner",
-		skillsColor: "Blue",
+		skillsColor: "Orange",
 		emoji: "💪",
 	},
 	{
@@ -25,7 +25,7 @@ export const skillSetsData = [
 	},
 	{
 		skillName: "WordPress",
-		level: "Advaned",
+		level: "Advanced",
 		skillsColor: "Red",
 		emoji: "💪",
 	},

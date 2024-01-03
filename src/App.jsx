@@ -50,7 +50,12 @@ function DevBio() {
 function Skills({ skillsObj }) {
 	return (
 		<div style={{ backgroundColor: skillsObj.skillsColor }}>
-			{skillsObj.skillName} {skillsObj.emoji}
+			{skillsObj.skillName}
+			{(skillsObj.level == "Beginner" ? (skillsObj.emoji = "👶") : "") ||
+				(skillsObj.level == "Intermediate"
+					? (skillsObj.emoji = "👌")
+					: "") ||
+				(skillsObj.level == "Advanced" ? (skillsObj.emoji = "💪") : "")}
 		</div>
 	);
 }
